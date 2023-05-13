@@ -1,0 +1,12 @@
+__pycache__
+.wc
+.env
+security.yaml
+asset/preprocess/industry
+.DS_store
+*.zip
+*.cst
+*.dbf
+*.prj
+*.shp
+*.shx
