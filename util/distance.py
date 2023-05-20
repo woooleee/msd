@@ -1,10 +1,16 @@
-import c as const
+# import c as const
 import numpy as np
+import math
 
-def distance_decay(addr0: (float, float), addr1: (float, float)) -> float:
+def distance_decay(value, distance) -> float:
     """
+    :param value: value such as population or od activity data
+    :param distance: distance in meter
+    :return processed_value
     """
-    ...
+    km_distance = distance / 1000
+    distance_decay_index = math.exp(-km_distance)
+    return value * distance_decay_index
 
 def sphere_distance(addr0: (float, float), addr1: (float, float)) -> float:
     """

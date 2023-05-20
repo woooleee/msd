@@ -149,3 +149,144 @@ DF_METRO_COL_AMEND_DICT = {key: value for key, value in zip(keys, values)}
 
 # GRID DF
 GRID_DF_COL = ['ADM_SECT_C', 'geometry', 'idx']
+
+
+# ENERGY DF
+BDELCT = {
+    'kr': '국토교통부_건물에너지정보 서비스_지번별 전기사용량 조회(bdelct)',
+    'url': 'https://www.data.go.kr/data/15054212/openapi.do',
+    'path': 'asset/rawfile/bdelct/',
+    'download': {
+        'download_url': None,
+        'target_dir': 'asset/rawfile/bdelct/'
+    },
+    'endpoint': None,
+    'procure_by': 'download', 
+    'gen_key': ['pnu'],
+    'gen_col_kr': [
+        "사용년월",
+        "대지위치",
+        "도로명대지위치",
+        "시군구코드",
+        "법정동코드",
+        "대지구분코드",
+        "번",
+        "지",
+        "새주소일련번호",
+        "새주소도로코드",
+        "새주소지상지하코드",
+        "새주소본번",
+        "새주소부번",
+        "사용량(KWh)"
+    ],
+
+    'kr_en_map': {  
+        "사용년월": "useYm",
+        "대지위치": "platPlc",
+        "도로명대지위치": "newPlatPlc",
+        "시군구코드": "sigunguCd",
+        "법정동코드": "bjdongCd",
+        "대지구분코드": "platGbCd",
+        "번": "bun",
+        "지": "ji",
+        "새주소일련번호": "naRoadNum",
+        "새주소도로코드": "naRoadCd",
+        "새주소지상지하코드": "naUgrndCd",
+        "새주소본번": "naMainBun",
+        "새주소부번": "naSubBun",
+        "사용량(KWh)": "kwh"
+    },
+
+    'gen_col_types': {
+        "useym": "VARCHAR(6)",
+        "platplc": "VARCHAR(500)",
+        "newplatplc": "VARCHAR(400)",
+        "sigungucd": "VARCHAR(5)",
+        "bjdongcd": "VARCHAR(5)",
+        "platgbcd": "VARCHAR(1)",
+        "bun": "VARCHAR(4)",
+        "ji": "VARCHAR(4)",
+        "naroadnum": "VARCHAR(6)",
+        "naroadcd": "VARCHAR(12)",
+        "naugrndcd": "VARCHAR(1)",
+        "namainbun": "NUMERIC(5)",
+        "nasubbun": "NUMERIC(5)",
+        "kwh": "NUMERIC(22)",
+        "rlgcd": "CHAR(2)",
+        "stdryear": "CHAR(4)",
+        "stdrmonth": "CHAR(2)",
+        "pnu": "CHAR(19)"
+    },
+    'save_cols': ['pnu', 'stdryear', 'stdrmonth', 'kwh', 'rlgcd']
+}
+
+BDGAS = {
+    'kr': '국토교통부_건물에너지정보 서비스_지번별 가스사용량 조회(bdgas)',
+    'url': 'https://www.data.go.kr/data/15054212/openapi.do',
+    'path': 'asset/rawfile/bdgas/',
+    'download': {
+        'download_url': None,
+        'target_dir': 'asset/rawfile/bdgas/'
+    },
+    'endpoint': None,
+    'procure_by': 'download', 
+    'gen_key': ['pnu'],
+    'gen_col_kr': [
+        "사용년월",
+        "대지위치",
+        "도로명대지위치",
+        "시군구코드",
+        "법정동코드",
+        "대지구분코드",
+        "번",
+        "지",
+        "새주소일련번호",
+        "새주소도로코드",
+        "새주소지상지하코드",
+        "새주소본번",
+        "새주소부번",
+        "사용량(KWh)"
+    ],
+
+    'kr_en_map': {  
+        "사용년월": "useYm",
+        "대지위치": "platPlc",
+        "도로명대지위치": "newPlatPlc",
+        "시군구코드": "sigunguCd",
+        "법정동코드": "bjdongCd",
+        "대지구분코드": "platGbCd",
+        "번": "bun",
+        "지": "ji",
+        "새주소일련번호": "naRoadNum",
+        "새주소도로코드": "naRoadCd",
+        "새주소지상지하코드": "naUgrndCd",
+        "새주소본번": "naMainBun",
+        "새주소부번": "naSubBun",
+        "사용량(KWh)": "kwh"
+    },
+
+    'gen_col_types': {
+        "useym": "VARCHAR(6)",
+        "platplc": "VARCHAR(500)",
+        "newplatplc": "VARCHAR(400)",
+        "sigungucd": "VARCHAR(5)",
+        "bjdongcd": "VARCHAR(5)",
+        "platgbcd": "VARCHAR(1)",
+        "bun": "VARCHAR(4)",
+        "ji": "VARCHAR(4)",
+        "naroadnum": "VARCHAR(6)",
+        "naroadcd": "VARCHAR(12)",
+        "naugrndcd": "VARCHAR(1)",
+        "namainbun": "NUMERIC(5)",
+        "nasubbun": "NUMERIC(5)",
+        "kwh": "NUMERIC(22)",
+        "rlgcd": "CHAR(2)",
+        "stdryear": "CHAR(4)",
+        "stdrmonth": "CHAR(2)",
+        "pnu": "CHAR(19)"
+    },
+    'save_cols': ['pnu', 'stdryear', 'stdrmonth', 'kwh', 'rlgcd']
+}
+
+# METRO
+SEOUL_METRO_NMS = ['1호선', '2호선', '3호선', '4호선', '5호선', '6호선', '7호선', '8호선', '9호선']
