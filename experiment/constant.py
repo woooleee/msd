@@ -290,3 +290,56 @@ BDGAS = {
 
 # METRO
 SEOUL_METRO_NMS = ['1호선', '2호선', '3호선', '4호선', '5호선', '6호선', '7호선', '8호선', '9호선']
+
+
+# CBD EXPANSION
+# Setting COLS
+SIM_CAL_COLS = [
+    'pp_pop', # X1
+    'pp_od', # X2
+    'bs_ebit', # X3
+    'bs_gas', # X4
+    'bs_elct', # X5
+    'bd_platarea', # X6
+    'bd_archarea', # X7
+    'bd_totarea', # X8
+    'bd_totflrcnt', # X9
+    'bd_elvtent', # X10
+    'bd_height', # X11
+    'bd_vintage', # X12
+    ]
+
+STANDARDIZE_COLS = [
+    'pp_pop', # X1
+    'pp_od', # X2
+    'bs_ebit', # X3
+    'bs_gas', # X4
+    'bs_elct', # X5
+    'bd_platarea', # X6
+    'bd_archarea', # X7
+    'bd_totarea', # X8
+    'bd_totflrcnt', # X9
+    'bd_elvtent', # X10
+    'bd_height', # X11
+    'bd_vintage', # X12
+    'bd_ilp' # X13
+    ]
+
+PP_COLS = [
+    'pp_pop', # X1
+    'pp_od', # X2
+]
+BS_COLS = [
+    'bs_ebit', # X3
+    'bs_gas', # X4
+    'bs_elct', # X5
+]
+BD_COLS = [
+    'bd_platarea', # X6
+    'bd_archarea', # X7
+    'bd_totarea', # X8
+    'bd_totflrcnt', # X9
+    'bd_elvtent', # X10
+    'bd_height', # X11
+    'bd_vintage', # X12
+]

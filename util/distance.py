@@ -35,7 +35,7 @@ def sphere_distance(addr0: (float, float), addr1: (float, float)) -> float:
             (np.cos(lat_trans0) * np.cos(lat_trans1) * (np.sin(d_lmb / 2) ** 2))
     )
     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
-    return const.EARTH_RADIUS_METER * c  # meter
+    return 6378 * 1000 * c  # earth meter
 
 
 
